@@ -1,0 +1,604 @@
+
+Lmod is automatically replacing "cce/15.0.0" with "amd/5.3.0".
+
+
+Lmod is automatically replacing "PrgEnv-cray/8.3.3" with "PrgEnv-amd/8.3.3".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-mpich/8.1.23
+
+
+Currently Loaded Modules:
+  1) craype-x86-trento                       6) cray-pmi/6.1.8         11) PrgEnv-amd/8.3.3         16) cray-mpich/8.1.23
+  2) libfabric/1.15.2.0                      7) amd/5.3.0              12) darshan-runtime/3.4.0    17) gcc-mixed/12.2.0
+  3) craype-network-ofi                      8) craype/2.7.19          13) hsi/default              18) cmake/3.23.2
+  4) perftools-base/22.12.0                  9) cray-dsmml/0.2.2       14) DefApps/default          19) ninja/1.10.2
+  5) xpmem/2.6.2-2.5_2.22__gd067c3f.shasta  10) cray-libsci/22.12.1.1  15) craype-accel-amd-gfx90a
+
+ 
+
+Stack 
+Using/Setting up qdpxx/chroma stack  qdpxx_H5ON qmp quda  Srcs:  quda
+srun -n 4 -N 1 /lustre/orion/scratch/mcamacho/stf006/benchmarks/MILC/hip/milc_qcd/ks_imp_rhmc/su3_rhmd_hisq input_4864
+SU3 with improved KS action
+Microcanonical simulation with refreshing
+Rational function hybrid Monte Carlo algorithm
+MIMD version 13ffa-dirty
+Machine = MPI (portable), with 4 nodes
+Host(0) = frontier08317
+Username = mcamacho
+start: Mon Aug  7 09:59:13 2023
+
+Options selected...
+Generic double precision
+C_GLOBAL_INLINE
+FEWSUMS
+KS_MULTICG=HYBRID
+KS_MULTIFF=FNMAT
+VECLENGTH=4
+INT_ALG=INT_3G1F
+HISQ_REUNIT_ALLOW_SVD
+HISQ_REUNIT_SVD_REL_ERROR = 1e-08
+HISQ_REUNIT_SVD_ABS_ERROR = 1e-08
+HISQ_FORCE_FILTER = 5e-05
+HISQ_FF_MULTI_WRAPPER is ON
+type 0 for no prompts, 1 for prompts, or 2 for proofreading
+nx 48
+ny 48
+nz 48
+nt 64
+node_geometry 1 1 1 4 
+ionode_geometry 1 1 1 4 
+iseed 571213
+n_pseudo 5
+load_rhmc_params rat.m001907m05252m6382
+beta 6
+n_dyn_masses 3
+dyn_mass 0.001907 0.05252 0.6382 
+dyn_flavors 2 1 1 
+u0 0.86372
+n_pseudo 5
+Loading rational function parameters for phi field 0
+naik_term_epsilon 0
+# New rational function
+# Approximation bounds are [1.000000e-15,9.000000e+01]
+# Precision of arithmetic is 85
+# Degree of the approximation is (9,9)
+# Approximating the function (x+4*0.001907^2)^(2/4) (x+4*0.052520^2)^(1/4) (x+4*0.200000^2)^(-3/4) (x+4*99.900000^2)^(0/4)
+# Converged at 2191 iterations, error = 6.469282e-07
+# Rational function for MD
+y_MD -2 -1 3 0 
+z_MD 4 4 4 4 
+m_MD 0.001907 0.05252 0.2 99.9 
+order_MD 9
+Loading order 9 rational function approximation for MD:
+f(x) = (x+4*0.001907^2)^(-2/4) (x+4*0.052520^2)^(-1/4)
+       (x+4*0.200000^2)^(3/4) (x+4*99.900000^2)^(0/4)
+res_MD 1
+res_MD 0.00125658
+res_MD 0.00177426
+res_MD 0.00302409
+res_MD 0.00552982
+res_MD 0.0103891
+res_MD 0.0201932
+res_MD 0.0367533
+res_MD 0.0255596
+res_MD 0.0127494
+pole_MD 99.9
+pole_MD 1.60439e-05
+pole_MD 3.19737e-05
+pole_MD 9.27449e-05
+pole_MD 0.000308423
+pole_MD 0.00106661
+pole_MD 0.00368777
+pole_MD 0.0112393
+pole_MD 0.0366726
+pole_MD 0.0995069
+# CHECK: f(1.000000e-15) = 2.046594e+02 = 2.046595e+02?
+# New rational function
+# Approximation bounds are [1.000000e-15,9.000000e+01]
+# Precision of arithmetic is 85
+# Degree of the approximation is (12,12)
+# Approximating the function (x+4*0.001907^2)^(2/8) (x+4*0.052520^2)^(1/8) (x+4*0.200000^2)^(-3/8) (x+4*99.900000^2)^(0/8)
+# Converged at 1838 iterations, error = 4.089376e-09
+# Rational function for GR
+y_GR 2 1 -3 0 
+z_GR 8 8 8 8 
+m_GR 0.001907 0.05252 0.2 99.9 
+order_GR 12
+Loading order 12 rational function approximation for GR:
+f(x) = (x+4*0.001907^2)^(2/8) (x+4*0.052520^2)^(1/8)
+       (x+4*0.200000^2)^(-3/8) (x+4*99.900000^2)^(0/8)
+res_GR 1
+res_GR -7.08296e-08
+res_GR -3.41543e-07
+res_GR -1.24159e-06
+res_GR -4.26438e-06
+res_GR -1.43938e-05
+res_GR -4.80607e-05
+res_GR -0.000157507
+res_GR -0.000489454
+res_GR -0.00224551
+res_GR -0.00762735
+res_GR -0.0194189
+res_GR -0.0286101
+pole_GR 99.9
+pole_GR 1.73994e-05
+pole_GR 3.04037e-05
+pole_GR 6.68823e-05
+pole_GR 0.000163894
+pole_GR 0.000419887
+pole_GR 0.00109399
+pole_GR 0.00286485
+pole_GR 0.00752972
+pole_GR 0.0199453
+pole_GR 0.0466449
+pole_GR 0.0954812
+pole_GR 0.148596
+# CHECK: f(1.000000e-15) = 6.990110e-02 = 6.990110e-02?
+# Rational function for FA
+y_FA -2 -1 3 0 
+z_FA 8 8 8 8 
+m_FA 0.001907 0.05252 0.2 99.9 
+order_FA 12
+Loading order 12 rational function approximation for FA:
+f(x) = (x+4*0.001907^2)^(-2/8) (x+4*0.052520^2)^(-1/8)
+       (x+4*0.200000^2)^(3/8) (x+4*99.900000^2)^(0/8)
+res_FA 1
+res_FA 2.62592e-05
+res_FA 5.64036e-05
+res_FA 0.00011256
+res_FA 0.000228389
+res_FA 0.000469179
+res_FA 0.000971001
+res_FA 0.0020296
+res_FA 0.00444911
+res_FA 0.0104375
+res_FA 0.014522
+res_FA 0.0164204
+res_FA 0.00889482
+pole_FA 99.9
+pole_FA 1.59888e-05
+pole_FA 2.57208e-05
+pole_FA 5.4167e-05
+pole_FA 0.000130231
+pole_FA 0.000331132
+pole_FA 0.000860407
+pole_FA 0.00225177
+pole_FA 0.00590389
+pole_FA 0.0143562
+pole_FA 0.034245
+pole_FA 0.0747275
+pole_FA 0.131335
+Loading rational function parameters for phi field 1
+# CHECK: f(1.000000e-15) = 1.430593e+01 = 1.430593e+01?
+naik_term_epsilon 0
+# New rational function
+# Approximation bounds are [1.000000e-15,9.000000e+01]
+# Precision of arithmetic is 75
+# Degree of the approximation is (7,7)
+# Approximating the function (x+4*0.200000^2)^(1/4) (x+4*99.900000^2)^(0/4) (x+4*99.900000^2)^(0/4) (x+4*99.900000^2)^(0/4)
+# Converged at 327 iterations, error = 2.398230e-07
+# Rational function for MD
+y_MD -1 0 0 0 
+z_MD 4 4 4 4 
+m_MD 0.2 99.9 99.9 99.9 
+order_MD 7
+Loading order 7 rational function approximation for MD:
+f(x) = (x+4*0.200000^2)^(-1/4) (x+4*99.900000^2)^(0/4)
+       (x+4*99.900000^2)^(0/4) (x+4*99.900000^2)^(0/4)
+res_MD 0.14923
+res_MD 0.046061
+res_MD 0.1138
+res_MD 0.274536
+res_MD 0.687619
+res_MD 1.83201
+res_MD 5.87481
+res_MD 38.0862
+pole_MD 99.9
+pole_MD 0.185283
+pole_MD 0.375399
+pole_MD 1.05812
+pole_MD 3.40313
+pole_MD 11.7405
+pole_MD 45.73
+pole_MD 283.916
+# CHECK: f(1.000000e-15) = 1.581138e+00 = 1.581139e+00?
+# New rational function
+# Approximation bounds are [1.000000e-15,9.000000e+01]
+# Precision of arithmetic is 75
+# Degree of the approximation is (9,9)
+# Approximating the function (x+4*0.200000^2)^(1/8) (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8)
+# Converged at 422 iterations, error = 1.700228e-09
+# Rational function for GR
+y_GR 1 0 0 0 
+z_GR 8 8 8 8 
+m_GR 0.2 99.9 99.9 99.9 
+order_GR 9
+Loading order 9 rational function approximation for GR:
+f(x) = (x+4*0.200000^2)^(1/8) (x+4*99.900000^2)^(0/8)
+       (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8)
+res_GR 2.73277
+res_GR -0.00512886
+res_GR -0.0204789
+res_GR -0.0639514
+res_GR -0.192686
+res_GR -0.585195
+res_GR -1.85803
+res_GR -6.68946
+res_GR -34.4017
+res_GR -617.898
+pole_GR 99.9
+pole_GR 0.186425
+pole_GR 0.315826
+pole_GR 0.679106
+pole_GR 1.64209
+pole_GR 4.20254
+pole_GR 11.2153
+pole_GR 32.0724
+pole_GR 110.326
+pole_GR 764.415
+# CHECK: f(1.000000e-15) = 7.952707e-01 = 7.952707e-01?
+# Rational function for FA
+y_FA -1 0 0 0 
+z_FA 8 8 8 8 
+m_FA 0.2 99.9 99.9 99.9 
+order_FA 9
+Loading order 9 rational function approximation for FA:
+f(x) = (x+4*0.200000^2)^(-1/8) (x+4*99.900000^2)^(0/8)
+       (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8)
+res_FA 0.365929
+res_FA 0.0109316
+res_FA 0.0292903
+res_FA 0.0678756
+res_FA 0.157093
+res_FA 0.370027
+res_FA 0.906451
+res_FA 2.45234
+res_FA 8.71503
+res_FA 75.8971
+pole_FA 99.9
+pole_FA 0.178875
+pole_FA 0.290944
+pole_FA 0.612037
+pole_FA 1.46486
+pole_FA 3.72845
+pole_FA 9.8933
+pole_FA 27.9493
+pole_FA 92.735
+pole_FA 546.062
+Loading rational function parameters for phi field 2
+# CHECK: f(1.000000e-15) = 1.257433e+00 = 1.257433e+00?
+naik_term_epsilon 0
+# New rational function
+# Approximation bounds are [1.000000e-15,9.000000e+01]
+# Precision of arithmetic is 75
+# Degree of the approximation is (7,7)
+# Approximating the function (x+4*0.200000^2)^(1/4) (x+4*99.900000^2)^(0/4) (x+4*99.900000^2)^(0/4) (x+4*99.900000^2)^(0/4)
+# Converged at 327 iterations, error = 2.398230e-07
+# Rational function for MD
+y_MD -1 0 0 0 
+z_MD 4 4 4 4 
+m_MD 0.2 99.9 99.9 99.9 
+order_MD 7
+Loading order 7 rational function approximation for MD:
+f(x) = (x+4*0.200000^2)^(-1/4) (x+4*99.900000^2)^(0/4)
+       (x+4*99.900000^2)^(0/4) (x+4*99.900000^2)^(0/4)
+res_MD 0.14923
+res_MD 0.046061
+res_MD 0.1138
+res_MD 0.274536
+res_MD 0.687619
+res_MD 1.83201
+res_MD 5.87481
+res_MD 38.0862
+pole_MD 99.9
+pole_MD 0.185283
+pole_MD 0.375399
+pole_MD 1.05812
+pole_MD 3.40313
+pole_MD 11.7405
+pole_MD 45.73
+pole_MD 283.916
+# CHECK: f(1.000000e-15) = 1.581138e+00 = 1.581139e+00?
+# New rational function
+# Approximation bounds are [1.000000e-15,9.000000e+01]
+# Precision of arithmetic is 75
+# Degree of the approximation is (9,9)
+# Approximating the function (x+4*0.200000^2)^(1/8) (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8)
+# Converged at 422 iterations, error = 1.700228e-09
+# Rational function for GR
+y_GR 1 0 0 0 
+z_GR 8 8 8 8 
+m_GR 0.2 99.9 99.9 99.9 
+order_GR 9
+Loading order 9 rational function approximation for GR:
+f(x) = (x+4*0.200000^2)^(1/8) (x+4*99.900000^2)^(0/8)
+       (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8)
+res_GR 2.73277
+res_GR -0.00512886
+res_GR -0.0204789
+res_GR -0.0639514
+res_GR -0.192686
+res_GR -0.585195
+res_GR -1.85803
+res_GR -6.68946
+res_GR -34.4017
+res_GR -617.898
+pole_GR 99.9
+pole_GR 0.186425
+pole_GR 0.315826
+pole_GR 0.679106
+pole_GR 1.64209
+pole_GR 4.20254
+pole_GR 11.2153
+pole_GR 32.0724
+pole_GR 110.326
+pole_GR 764.415
+# CHECK: f(1.000000e-15) = 7.952707e-01 = 7.952707e-01?
+# Rational function for FA
+y_FA -1 0 0 0 
+z_FA 8 8 8 8 
+m_FA 0.2 99.9 99.9 99.9 
+order_FA 9
+Loading order 9 rational function approximation for FA:
+f(x) = (x+4*0.200000^2)^(-1/8) (x+4*99.900000^2)^(0/8)
+       (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8)
+res_FA 0.365929
+res_FA 0.0109316
+res_FA 0.0292903
+res_FA 0.0678756
+res_FA 0.157093
+res_FA 0.370027
+res_FA 0.906451
+res_FA 2.45234
+res_FA 8.71503
+res_FA 75.8971
+pole_FA 99.9
+pole_FA 0.178875
+pole_FA 0.290944
+pole_FA 0.612037
+pole_FA 1.46486
+pole_FA 3.72845
+pole_FA 9.8933
+pole_FA 27.9493
+pole_FA 92.735
+pole_FA 546.062
+Loading rational function parameters for phi field 3
+# CHECK: f(1.000000e-15) = 1.257433e+00 = 1.257433e+00?
+naik_term_epsilon 0
+# New rational function
+# Approximation bounds are [1.000000e-15,9.000000e+01]
+# Precision of arithmetic is 75
+# Degree of the approximation is (7,7)
+# Approximating the function (x+4*0.200000^2)^(1/4) (x+4*99.900000^2)^(0/4) (x+4*99.900000^2)^(0/4) (x+4*99.900000^2)^(0/4)
+# Converged at 327 iterations, error = 2.398230e-07
+# Rational function for MD
+y_MD -1 0 0 0 
+z_MD 4 4 4 4 
+m_MD 0.2 99.9 99.9 99.9 
+order_MD 7
+Loading order 7 rational function approximation for MD:
+f(x) = (x+4*0.200000^2)^(-1/4) (x+4*99.900000^2)^(0/4)
+       (x+4*99.900000^2)^(0/4) (x+4*99.900000^2)^(0/4)
+res_MD 0.14923
+res_MD 0.046061
+res_MD 0.1138
+res_MD 0.274536
+res_MD 0.687619
+res_MD 1.83201
+res_MD 5.87481
+res_MD 38.0862
+pole_MD 99.9
+pole_MD 0.185283
+pole_MD 0.375399
+pole_MD 1.05812
+pole_MD 3.40313
+pole_MD 11.7405
+pole_MD 45.73
+pole_MD 283.916
+# CHECK: f(1.000000e-15) = 1.581138e+00 = 1.581139e+00?
+# New rational function
+# Approximation bounds are [1.000000e-15,9.000000e+01]
+# Precision of arithmetic is 75
+# Degree of the approximation is (9,9)
+# Approximating the function (x+4*0.200000^2)^(1/8) (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8)
+# Converged at 422 iterations, error = 1.700228e-09
+# Rational function for GR
+y_GR 1 0 0 0 
+z_GR 8 8 8 8 
+m_GR 0.2 99.9 99.9 99.9 
+order_GR 9
+Loading order 9 rational function approximation for GR:
+f(x) = (x+4*0.200000^2)^(1/8) (x+4*99.900000^2)^(0/8)
+       (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8)
+res_GR 2.73277
+res_GR -0.00512886
+res_GR -0.0204789
+res_GR -0.0639514
+res_GR -0.192686
+res_GR -0.585195
+res_GR -1.85803
+res_GR -6.68946
+res_GR -34.4017
+res_GR -617.898
+pole_GR 99.9
+pole_GR 0.186425
+pole_GR 0.315826
+pole_GR 0.679106
+pole_GR 1.64209
+pole_GR 4.20254
+pole_GR 11.2153
+pole_GR 32.0724
+pole_GR 110.326
+pole_GR 764.415
+# CHECK: f(1.000000e-15) = 7.952707e-01 = 7.952707e-01?
+# Rational function for FA
+y_FA -1 0 0 0 
+z_FA 8 8 8 8 
+m_FA 0.2 99.9 99.9 99.9 
+order_FA 9
+Loading order 9 rational function approximation for FA:
+f(x) = (x+4*0.200000^2)^(-1/8) (x+4*99.900000^2)^(0/8)
+       (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8)
+res_FA 0.365929
+res_FA 0.0109316
+res_FA 0.0292903
+res_FA 0.0678756
+res_FA 0.157093
+res_FA 0.370027
+res_FA 0.906451
+res_FA 2.45234
+res_FA 8.71503
+res_FA 75.8971
+pole_FA 99.9
+pole_FA 0.178875
+pole_FA 0.290944
+pole_FA 0.612037
+pole_FA 1.46486
+pole_FA 3.72845
+pole_FA 9.8933
+pole_FA 27.9493
+pole_FA 92.735
+pole_FA 546.062
+Loading rational function parameters for phi field 4
+# CHECK: f(1.000000e-15) = 1.257433e+00 = 1.257433e+00?
+naik_term_epsilon -0.23093
+# New rational function
+# Approximation bounds are [1.000000e-15,9.000000e+01]
+# Precision of arithmetic is 75
+# Degree of the approximation is (7,7)
+# Approximating the function (x+4*0.638200^2)^(1/4) (x+4*99.900000^2)^(0/4) (x+4*99.900000^2)^(0/4) (x+4*99.900000^2)^(0/4)
+# Converged at 268 iterations, error = 9.467970e-10
+# Rational function for MD
+y_MD -1 0 0 0 
+z_MD 4 4 4 4 
+m_MD 0.6382 99.9 99.9 99.9 
+order_MD 7
+Loading order 7 rational function approximation for MD:
+f(x) = (x+4*0.638200^2)^(-1/4) (x+4*99.900000^2)^(0/4)
+       (x+4*99.900000^2)^(0/4) (x+4*99.900000^2)^(0/4)
+res_MD 0.128625
+res_MD 0.164085
+res_MD 0.343808
+res_MD 0.670534
+res_MD 1.37603
+res_MD 3.1409
+res_MD 9.24619
+res_MD 59.0785
+pole_MD 99.9
+pole_MD 1.77054
+pole_MD 2.70607
+pole_MD 5.3576
+pole_MD 12.3717
+pole_MD 32.1017
+pole_MD 99.8824
+pole_MD 537.144
+# CHECK: f(1.000000e-15) = 8.851291e-01 = 8.851291e-01?
+# New rational function
+# Approximation bounds are [1.000000e-15,9.000000e+01]
+# Precision of arithmetic is 75
+# Degree of the approximation is (9,9)
+# Approximating the function (x+4*0.638200^2)^(1/8) (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8)
+# Converged at 346 iterations, error = 1.534276e-12
+# Rational function for GR
+y_GR 1 0 0 0 
+z_GR 8 8 8 8 
+m_GR 0.6382 99.9 99.9 99.9 
+order_GR 9
+Loading order 9 rational function approximation for GR:
+f(x) = (x+4*0.638200^2)^(1/8) (x+4*99.900000^2)^(0/8)
+       (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8)
+res_GR 2.94351
+res_GR -0.0347761
+res_GR -0.118876
+res_GR -0.299672
+res_GR -0.717746
+res_GR -1.75204
+res_GR -4.61272
+res_GR -14.4754
+res_GR -68.9904
+res_GR -1208.92
+pole_GR 99.9
+pole_GR 1.77681
+pole_GR 2.43092
+pole_GR 3.96881
+pole_GR 7.28595
+pole_GR 14.4842
+pole_GR 30.9504
+pole_GR 73.5408
+pole_GR 220.282
+pole_GR 1408.86
+# CHECK: f(1.000000e-15) = 1.062911e+00 = 1.062911e+00?
+# Rational function for FA
+y_FA -1 0 0 0 
+z_FA 8 8 8 8 
+m_FA 0.6382 99.9 99.9 99.9 
+order_FA 9
+Loading order 9 rational function approximation for FA:
+f(x) = (x+4*0.638200^2)^(-1/8) (x+4*99.900000^2)^(0/8)
+       (x+4*99.900000^2)^(0/8) (x+4*99.900000^2)^(0/8)
+res_FA 0.339731
+res_FA 0.048744
+res_FA 0.115222
+res_FA 0.223506
+res_FA 0.4284
+res_FA 0.846557
+res_FA 1.79099
+res_FA 4.37133
+res_FA 14.7675
+res_FA 127.441
+pole_FA 99.9
+pole_FA 1.73528
+pole_FA 2.31193
+pole_FA 3.70511
+pole_FA 6.72046
+pole_FA 13.2419
+pole_FA 28.0193
+pole_FA 65.4354
+pole_FA 187.832
+pole_FA 1012.96
+Maximum rational func order is 12
+Naik term correction structure of multi_x:
+n_naiks 2
+n_pseudo_naik[0]=4
+n_orders_naik[0]=30
+eps_naik[0]=0.000000
+n_pseudo_naik[1]=1
+n_orders_naik[1]=7
+eps_naik[1]=-0.230930
+QMP m0,n0@(null) error: In file /lustre/orion/scratch/mcamacho/stf006/chroma/src/qmp/lib/QMP_topology.c, function QMP_logical_topology_is_declared, line 169:
+QMP m0,n0@(null) error: assert failed QMP_machine->inited==QMP_TRUE
+QMP m0,n0@(null) error: abort: 1
+QMP m0,n0@(null) error: In file /lustre/orion/scratch/mcamacho/stf006/chroma/src/qmp/lib/QMP_topology.c, function QMP_logical_topology_is_declared, line 169:
+QMP m0,n0@(null) error: assert failed QMP_machine->inited==QMP_TRUE
+QMP m0,n0@(null) error: abort: 1
+QMP m0,n0@(null) error: In file /lustre/orion/scratch/mcamacho/stf006/chroma/src/qmp/lib/QMP_topology.c, function QMP_logical_topology_is_declared, line 169:
+QMP m0,n0@(null) error: assert failed QMP_machine->inited==QMP_TRUE
+QMP m0,n0@(null) error: abort: 1
+QMP m0,n0@(null) error: In file /lustre/orion/scratch/mcamacho/stf006/chroma/src/qmp/lib/QMP_topology.c, function QMP_logical_topology_is_declared, line 169:
+QMP m0,n0@(null) error: assert failed QMP_machine->inited==QMP_TRUE
+QMP m0,n0@(null) error: abort: 1
+MPICH ERROR [Rank 0] [job id 1400007.2] [Mon Aug  7 09:59:13 2023] [frontier08317] - Abort(1) (rank 0 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 0
+
+n_order_naik_total 37
+LAYOUT = Hypercubes, options = with fixed input-parameter node_geometry
+ON EACH NODE (RANK) 48 x 48 x 48 x 16
+Mallocing 2774.5 MBytes per node for lattice
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 0
+MPICH ERROR [Rank 1] [job id 1400007.2] [Mon Aug  7 09:59:13 2023] [frontier08317] - Abort(1) (rank 1 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1
+MPICH ERROR [Rank 2] [job id 1400007.2] [Mon Aug  7 09:59:13 2023] [frontier08317] - Abort(1) (rank 2 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 2
+
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 2
+MPICH ERROR [Rank 3] [job id 1400007.2] [Mon Aug  7 09:59:13 2023] [frontier08317] - Abort(1) (rank 3 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3
+srun: error: frontier08317: tasks 0-3: Exited with exit code 255
+srun: Terminating StepId=1400007.2
